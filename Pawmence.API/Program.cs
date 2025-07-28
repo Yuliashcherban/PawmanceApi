@@ -16,8 +16,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.MapGet("/", () => "Hello world!");
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
